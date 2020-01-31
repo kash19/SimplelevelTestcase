@@ -22,6 +22,14 @@ private WebDriver driver;
 	@FindBy(id="form-login_submitAuth")
 	private WebElement loginBtn; 
 	
+	@FindBy(xpath="//a[contains(text(),'123testing')]")
+	private WebElement courseList;
+	
+	@FindBy(id="istooldesc_1742")
+	private WebElement courseDescription;
+	
+
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -35,5 +43,14 @@ private WebDriver driver;
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
-
+	 public void clickcourseList()
+	 {
+		 this.courseList.click();
+	 }
+	 public void clickCoursedesc()
+	 {
+		 this.courseDescription.click();
+	 }
+	 
+	
 }

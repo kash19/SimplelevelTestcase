@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.PomLoginTest">
+      <class name="com.training.sanity.tests.fifthTestcase">
         <methods>
-          <include name="tearDown"/>
-          <include name="admin"/>
           <include name="setUpBeforeClass"/>
+          <include name="addCourse"/>
+          <include name="validLoginTest"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.PomLoginTest -->
+      </class> <!-- com.training.sanity.tests.fifthTestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

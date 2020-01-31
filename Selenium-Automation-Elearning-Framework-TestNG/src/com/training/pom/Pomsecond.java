@@ -67,4 +67,6 @@ private WebDriver driver;
  {
 	 this.regbtn.click();
  }
+ 
+
 }

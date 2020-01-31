@@ -24,7 +24,7 @@ public class testforth15 {
 	private WebDriver driver;
 	private String baseUrl;
 	
-	private pomForth15 pomForth15;
+	private pomForth15 testforth15;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -34,7 +34,7 @@ public class testforth15 {
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		pomForth15 = new pomForth15(driver);
+		testforth15 = new pomForth15(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -62,19 +62,17 @@ public class testforth15 {
 	@Test(priority=0)
 	public void validLoginTest() throws InterruptedException {
 		Thread.sleep(1000);
-		pomForth15.sendUserName("kash");
-		pomForth15.sendPassword("kash@123");
-		pomForth15.clickLoginBtn();
+		testforth15.sendUserName("kash");
+		testforth15.sendPassword("kash@123");
+		testforth15.clickLoginBtn();
 	//	screenShot.captureScreenShot("First");
 		 //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		//pomForth15.clickdroptn();
 		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			
-		 WebDriverWait ewait = new WebDriverWait(driver,10);
-		   WebElement button = ewait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='caret']")));
-		   button.click();
-		  
-		pomForth15.clickLogoutBtn();
+		 testforth15.clickdroptn();
+		 Thread.sleep(1000);
+		   testforth15.clickLogoutBtn();
 		
 	
 	
